@@ -1,0 +1,104 @@
+/* Professional highlights, experience, and education. */
+/* Work highlights share the same even column alignment as the expertise cards. */
+.projects-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+.projects-grid .project {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.projects-grid .project-preview {
+  height: 300px;
+  flex: none;
+}
+.projects-grid .project-info {
+  align-items: flex-start;
+  gap: 12px;
+}
+.projects-grid .project-info > div { min-width: 0; }
+.projects-grid .project-category {
+  display: block;
+  min-height: 30px;
+}
+.projects-grid .project-info h3 {
+  min-height: 62px;
+  font-size: 22px;
+}
+.projects-grid .project > p {
+  flex: 1;
+  max-width: none;
+}
+.projects-grid .desktop-break { display: none; }
+.projects-grid .project-index {
+  left: 18px;
+  right: 18px;
+  font-size: 8px;
+}
+.projects-grid .support-console,
+.projects-grid .deployment-console,
+.projects-grid .cloud-console {
+  left: 18px;
+  right: 18px;
+  top: 54px;
+}
+.projects-grid .console-content,
+.projects-grid .deployment-content { padding: 22px 18px 0; }
+.projects-grid .console-content > strong,
+.projects-grid .deployment-content > strong {
+  font-size: clamp(20px, 2.2vw, 31px);
+}
+.projects-grid .deployment-content { padding-bottom: 18px; }
+.projects-grid .deployment-steps { gap: 5px; }
+.projects-grid .deployment-steps > span { gap: 4px; font-size: 7px; }
+.projects-grid .deployment-steps b { padding: 4px; }
+.projects-grid .cloud-console { padding: 20px 14px; }
+.projects-grid .cloud-node { width: 52px; }
+.projects-grid .cloud-connection { width: 20px; flex-shrink: 1; }
+.projects-grid .cloud-services { gap: 5px; font-size: 5px; }
+.projects-grid .cloud-footer { gap: 8px; font-size: 4px; }
+@media (min-width: 1600px) {
+  .projects-grid .project-preview { height: 330px; }
+}
+@media (min-width: 761px) and (max-width: 1000px) {
+  .projects-grid .project-preview { height: 255px; }
+  .projects-grid .project-info h3 { font-size: 19px; min-height: 81px; }
+  .projects-grid .round-link { width: 32px; height: 32px; font-size: 18px; }
+  .projects-grid .console-content,
+  .projects-grid .deployment-content { padding: 18px 12px 0; }
+  .projects-grid .console-label { font-size: 5px; }
+  .projects-grid .console-items > span { font-size: 7px; gap: 8px; }
+  .projects-grid .deployment-steps { flex-wrap: wrap; }
+  .projects-grid .deployment-steps > i { display: none; }
+  .projects-grid .cloud-node { width: 44px; font-size: 17px; }
+  .projects-grid .cloud-connection { width: 10px; }
+  .projects-grid .cloud-heading > span { font-size: 5px; }
+  .projects-grid .cloud-services { flex-wrap: wrap; }
+}
+@media (max-width: 760px) {
+  .projects-grid { grid-template-columns: 1fr; gap: 38px; }
+  .projects-grid .project-preview { height: 335px; }
+  .projects-grid .project-category,
+  .projects-grid .project-info h3 { min-height: 0; }
+  .projects-grid .console-content > strong,
+  .projects-grid .deployment-content > strong { font-size: 30px; }
+  .projects-grid .support-console,
+  .projects-grid .deployment-console,
+  .projects-grid .cloud-console { left: 24px; right: 24px; top: 62px; }
+  .projects-grid .cloud-node { width: 60px; }
+  .projects-grid .cloud-connection { width: 26px; }
+}
+@media (max-width: 390px) {
+  .projects-grid .project-preview { height: 300px; }
+  .projects-grid .console-content > strong,
+  .projects-grid .deployment-content > strong { font-size: 26px; }
+  .projects-grid .cloud-node { width: 50px; }
+  .projects-grid .cloud-connection { width: 15px; }
+}
+.desktop-nav{gap:27px;margin-left:0}.hero h1{font-size:clamp(54px,5.95vw,85px)}.hero-description{max-width:450px}.hero-actions .button-outline svg{width:18px;height:18px}.support-console,.deployment-console{position:absolute;top:65px;left:30px;right:30px;background:#181513;border:1px solid #ffffff26;border-radius:6px;box-shadow:0 18px 40px #1807038c;transform:rotate(-2deg);transition:transform .4s}.console-bar{padding:10px 14px;border-bottom:1px solid #ffffff15;display:flex;align-items:center;justify-content:space-between;font-size:7px;letter-spacing:.1em;color:#a48e80}.console-bar>span:first-child{display:flex;gap:4px}.console-bar i{width:4px;height:4px;border-radius:50%;background:#8c7062}.console-bar>span:last-child{font-size:12px}.console-content{padding:25px 26px 0}.console-label{font-size:7px;letter-spacing:.17em;color:#b99c89;display:block}.console-content>strong,.deployment-content>strong{display:block;font-family:var(--display);font-size:34px;font-weight:500;letter-spacing:-.045em;line-height:1.15;margin-top:10px}.console-items{display:grid;gap:0;margin-top:22px}.console-items>span{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid #ffffff0c;font-size:9px;color:#c3b5aa}.console-items i{font-size:7px;font-style:normal;color:#936e59}.console-items b{margin-left:auto;font-weight:400;font-size:12px;color:#b58267}.console-footer{display:flex;justify-content:space-between;font-size:6px;letter-spacing:.1em;color:#806a5b;padding:15px 0}.project-preview:hover .support-console{transform:rotate(0) translateY(-5px)}.deployment-console{background:#17171a;transform:rotate(2deg);border-color:#bea6d72d}.deployment-console .console-bar{color:#8d849d}.deployment-content{padding:25px 26px 20px}.deployment-content .console-label{color:#a8a0bc}.deployment-content>strong{color:#e5dfed}.deployment-steps{display:flex;align-items:center;justify-content:space-between;margin:22px 0;padding:12px 0;border-top:1px solid #ffffff0c;border-bottom:1px solid #ffffff0c;gap:8px}.deployment-steps>span{font-size:8px;color:#afa4c4;display:flex;align-items:center;gap:7px}.deployment-steps b{font-size:7px;background:#bb9ae622;border:1px solid #bb9ae633;border-radius:50%;padding:5px;color:#cbb1ed;font-weight:400;line-height:1}.deployment-steps>i{font-size:13px;font-style:normal;color:#605369}.deployment-row{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff0c;padding:7px 0;font-size:8px;color:#958b9f}.deployment-row>span:last-child{font-size:13px;color:#9681b0}.project-preview:hover .deployment-console{transform:rotate(0) translateY(-5px)}.cloud-preview{background:radial-gradient(ellipse at 90% 0%,#754528,#342016 70%)}.cloud-console{position:absolute;top:56px;left:30px;right:30px;padding:20px 23px;background:#1c1915;border:1px solid #e2a36638;border-radius:5px;box-shadow:0 18px 40px #1309068c;transform:rotate(-2deg);transition:transform .4s}.cloud-heading{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #ffffff12;padding-bottom:20px}.cloud-heading strong{font-size:28px;position:relative;letter-spacing:-1px;font-weight:500;line-height:1.1}.cloud-heading strong>span{position:absolute;top:17px;left:6px;color:#dd9a56;font-size:28px;line-height:1}.cloud-heading>span{font-size:7px;letter-spacing:.15em;color:#c0a488}.cloud-network{display:flex;align-items:center;justify-content:center;padding:28px 0 19px}.cloud-node{width:69px;flex-shrink:0;padding:15px 0;border:1px solid #d39d6350;border-radius:6px;font-size:20px;letter-spacing:-.035em;text-align:center;line-height:1.2;color:#dfc4a6;background:#ffffff02}.cloud-node>small{display:block;font-size:5px;letter-spacing:.15em;margin-top:9px;color:#a18a72}.cloud-node-main{background:#7f4b232a;border-color:#d18f51;font-size:22px}.cloud-connection{width:36px;height:1px;background:#ab784c66}.cloud-services{display:flex;justify-content:space-between;gap:10px;font-size:6px;color:#b39476}.cloud-footer{display:flex;justify-content:space-between;gap:14px;border-top:1px solid #ffffff12;font-size:5px;color:#7d6a57;letter-spacing:.08em;padding-top:15px;margin-top:22px}.project-preview:hover .cloud-console{transform:rotate(0) translateY(-5px)}.work-note{font-size:12px}.stack-row small{font-size:10px;color:#7b6b60;margin-left:-3px}.expertise-card p{min-height:126px}.experience-section{border-bottom:1px solid #ffffff09}.experience-layout{display:grid;grid-template-columns:.7fr 1.4fr;gap:100px;align-items:start}.experience-number{display:flex;font-family:var(--display);font-size:105px;font-weight:450;letter-spacing:-.05em;line-height:1;color:#bda18d;align-items:end;gap:15px}.experience-number>span{font-size:14px;letter-spacing:0;line-height:1;padding-bottom:14px;color:#9a8879}.experience-summary>p{font-size:14px;color:#9f948b;line-height:1.8;margin-top:22px}.certification-note{display:flex;gap:17px;align-items:center;margin-top:35px;padding-top:27px;border-top:1px solid var(--line)}.certification-note svg{color:#c99973;width:35px;height:35px;flex-shrink:0;stroke-width:1.2}.certification-note strong{display:block;font-size:15px;font-weight:500;line-height:1.5;color:#cbb3a0}.certification-note span{display:block;font-size:10px;color:#8f7a69;margin-top:7px}.experience-entry{border-top:1px solid #ffffff24;padding:25px 0}.experience-entry:last-child{border-bottom:1px solid #ffffff24}.experience-entry>summary{position:relative;list-style:none;cursor:pointer;padding-right:45px}.experience-entry>summary::-webkit-details-marker{display:none}.experience-entry>summary:focus-visible{outline:2px solid var(--accent);outline-offset:8px}.experience-company{display:block;font-size:12px;color:#9f8573;margin-bottom:6px}.experience-role{display:block;font-family:var(--display);font-size:23px;line-height:1.4;font-weight:500;letter-spacing:-.03em}.experience-date{display:block;font-size:10px;letter-spacing:.1em;color:#8d8078;margin-top:11px}.entry-toggle{position:absolute;right:0;top:5px;font-size:24px;line-height:1.2;color:#c5a58c;transition:transform .2s}.experience-entry[open] .entry-toggle{transform:rotate(45deg)}.experience-entry ul{font-size:14px;line-height:1.9;color:#a59b94;padding-left:17px;margin:22px 0 0}.experience-entry li{padding-left:4px;margin-bottom:8px}.experience-entry li::marker{color:#986f58;font-size:10px}.about-identity{height:500px}.about-initials{top:82px}.education-block{margin-top:30px;padding-top:25px;border-top:1px solid var(--line);display:grid;gap:20px}.education-block h3{font-size:16px;letter-spacing:-.02em;font-weight:500;margin-top:5px}.education-block p{font-size:13px;color:#9f9186;line-height:1.7;margin-top:5px}.email-link{display:inline-block;font-size:14px;color:#eac1a4;margin-top:16px;border-bottom:1px solid #eac1a44a;padding-bottom:3px}.email-link:hover{color:#fff}.footer-socials{display:flex;gap:20px;font-size:11px;color:#a3948a}.footer-socials>a:hover{color:var(--accent)}
+@media(min-width:1600px){.hero h1{font-size:94px}.support-console,.deployment-console{top:75px}.console-content>strong,.deployment-content>strong{font-size:39px}.console-items>span{padding:13px 0;font-size:10px}.cloud-console{top:62px;padding:24px 30px}.cloud-network{padding-top:32px;padding-bottom:26px}}
+@media(max-width:1100px){.hero h1{font-size:63px}.console-content,.deployment-content{padding:22px 20px 0}.console-content>strong,.deployment-content>strong{font-size:29px}.support-console,.deployment-console{left:24px;right:24px}.console-items>span{font-size:8px;padding:9px 0}.deployment-steps>span{gap:5px;font-size:7px}.deployment-steps b{padding:4px}.deployment-row{font-size:7px}.deployment-content{padding-bottom:18px}.cloud-console{left:24px;right:24px;top:55px;padding:18px}.cloud-network{padding:26px 0 18px}.cloud-node{width:62px;padding:13px 0}.cloud-connection{width:23px}.cloud-services{font-size:5px;gap:6px}.cloud-footer{font-size:4px}.experience-layout{gap:55px}.experience-role{font-size:21px}.about-identity{height:515px}.about-initials{top:110px}.expertise-card p{min-height:158px}}
+@media(max-width:760px){.hero h1{font-size:clamp(49px,10.5vw,74px)}.console-content,.deployment-content{padding:26px 25px 0}.console-content>strong,.deployment-content>strong{font-size:35px}.support-console,.deployment-console{top:65px;left:28px;right:28px}.console-items>span{font-size:9px;padding:11px 0}.deployment-steps>span{font-size:8px;gap:7px}.deployment-steps b{padding:5px}.deployment-row{font-size:8px;padding:9px 0}.deployment-content{padding-bottom:20px}.cloud-console{left:28px;right:28px;top:64px;padding:23px}.cloud-node{width:68px;padding:15px 0}.cloud-network{padding:28px 0 24px}.cloud-connection{width:30px}.cloud-services{font-size:6px;gap:8px}.cloud-footer{font-size:5px}.expertise-card p{min-height:0}.experience-layout{grid-template-columns:1fr;gap:33px}.experience-summary{display:grid;grid-template-columns:1fr 1fr;gap:20px}.experience-number{font-size:72px}.experience-number>span{padding-bottom:9px}.experience-summary>p{font-size:12px;margin-top:0;align-self:center}.certification-note{grid-column:1 / -1;margin-top:0;padding-top:21px}.certification-note strong{font-size:14px}.certification-note strong br{display:none}.certification-note span{font-size:11px}.experience-role{font-size:21px}.experience-company{font-size:12px}.experience-date{font-size:10px}.experience-entry ul{font-size:14px}.about-identity{height:360px}.about-initials{top:45px}.education-block{gap:22px}.footer-wrap{flex-wrap:wrap;gap:23px 10px}.footer-wrap p{max-width:none;font-size:10px}.footer-socials{font-size:10px;order:4;width:100%;justify-content:center;padding-top:13px;border-top:1px solid var(--line);gap:25px}.stack-row>div{gap:16px 22px}.stack-row>div>span{font-size:13px}.stack-row small{font-size:9px}.contact-bottom .button{font-size:13px}.experience-section .section-heading{gap:24px}}
+@media(max-width:390px){.hero h1{font-size:48px}.console-content,.deployment-content{padding:22px 19px 0}.console-content>strong,.deployment-content>strong{font-size:29px}.support-console,.deployment-console{left:22px;right:22px;top:58px}.console-items>span{padding:9px 0;font-size:8px}.deployment-steps{margin:17px 0}.deployment-steps>span{font-size:7px;gap:5px}.deployment-row{font-size:7px;padding:7px 0}.deployment-content{padding-bottom:17px}.cloud-console{left:22px;right:22px;top:58px;padding:19px}.cloud-node{width:56px;font-size:19px;padding:14px 0}.cloud-connection{width:20px}.cloud-network{padding:26px 0 18px}.cloud-footer{font-size:4px}.cloud-services{font-size:5px}.hero-bottom>div{font-size:10px;gap:11px}.hero-bottom>a{font-size:6px}.about-copy>h2{font-size:34px}.experience-role{font-size:19px}.experience-summary{gap:15px}.experience-summary>p{font-size:11px}}

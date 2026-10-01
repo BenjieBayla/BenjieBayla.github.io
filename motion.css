@@ -1,0 +1,39 @@
+/* Restrained entrances and interaction feedback. Content stays visible without JS. */
+@keyframes hero-enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mobile-nav-enter {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes mobile-nav-exit {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-8px); }
+}
+
+.motion-enabled .hero-copy { animation: hero-enter 300ms ease-out both; }
+.motion-enabled .hero-visual { animation: hero-enter 300ms ease-out 60ms both; }
+
+.motion-reveal {
+  transition: opacity 270ms ease-out, transform 270ms ease-out;
+}
+.motion-reveal.motion-pending {
+  opacity: .65;
+  transform: translateY(10px);
+}
+.motion-reveal.motion-instant { transition: none; }
+
+.mobile-nav.is-opening { animation: mobile-nav-enter 180ms ease-out both; }
+.mobile-nav.is-closing { animation: mobile-nav-exit 140ms ease-in both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-enabled .hero-copy,
+  .motion-enabled .hero-visual,
+  .mobile-nav.is-opening,
+  .mobile-nav.is-closing { animation: none !important; }
+  .motion-reveal { transition: none !important; }
+  .motion-reveal.motion-pending { opacity: 1 !important; transform: none !important; }
+}

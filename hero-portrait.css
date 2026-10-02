@@ -1,42 +1,44 @@
 /* Identity leads the hero; retain the existing portrait and atmosphere. */
 .hero-layout {
-  grid-template-columns: minmax(0, 1fr) clamp(363px, 29vw, 413px) minmax(0, 1fr);
-  gap: 20px 24px;
+  grid-template-columns: minmax(0, 1fr) clamp(436px, 36vw, 529px);
+  grid-template-rows: min-content 1fr;
+  gap: 24px 32px;
   min-height: 0;
   padding-block: 40px;
-  align-items: end;
+  align-items: start;
 }
 .hero .hero-name {
-  grid-column: 1 / -1;
+  grid-column: 1;
   grid-row: 1;
   margin: 0;
   color: var(--text);
   font-family: var(--display);
-  font-size: clamp(56px, 7vw, 100px);
+  font-size: clamp(56px, 6vw, 86px);
   font-weight: 550;
   letter-spacing: -.045em;
   line-height: 1.02;
-  text-align: center;
+  text-align: left;
 }
 .hero-name > span { display: block; white-space: nowrap; }
 .hero-copy { grid-column: 1; grid-row: 2; min-width: 0; }
 .hero .hero-role {
-  margin: 0 0 20px;
-  font-size: clamp(32px, 2.65vw, 38px);
+  margin: 0 0 16px;
+  font-size: clamp(28px, 2.3vw, 32px);
   font-weight: 550;
   letter-spacing: -.045em;
   line-height: 1.15;
 }
-.hero-actions { flex-wrap: wrap; }
+.hero .hero-description { max-width: 560px; }
+.hero .hero-actions { flex-wrap: wrap; margin-top: 24px; }
 
 .hero-portrait {
   position: relative;
   grid-column: 2;
-  grid-row: 2;
-  align-self: end;
+  grid-row: 1 / 3;
+  align-self: start;
   display: flex;
-  justify-content: center;
-  height: clamp(440px, 35vw, 500px);
+  justify-content: flex-end;
+  height: clamp(528px, 43.5vw, 640px);
   min-width: 0;
 }
 .hero-portrait img {
@@ -57,20 +59,21 @@
 }
 
 @media (max-width: 1000px) {
-  .hero-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; }
-  .hero .hero-name { grid-column: 1; font-size: clamp(42px, 6vw, 60px); }
-  .hero-portrait { grid-column: 1; height: 340px; }
+  .hero-layout { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; gap: 16px; }
+  .hero .hero-name { grid-column: 1; font-size: clamp(42px, 6vw, 60px); text-align: center; }
+  .hero-portrait { grid-column: 1; grid-row: 2; height: 340px; justify-content: center; }
   .hero-copy { grid-row: 3; width: 100%; max-width: 620px; justify-self: center; }
-  .hero .hero-role { font-size: 34px; }
+  .hero .hero-role { font-size: 30px; }
 }
 
 @media (max-width: 760px) {
-  .hero-layout { padding-block: 32px 30px; gap: 20px; }
+  .hero-layout { padding-block: 32px 30px; gap: 12px; }
   .hero .hero-name { font-size: clamp(32px, 9vw, 42px); }
-  .hero-portrait { height: 300px; }
-  .hero .hero-role { font-size: clamp(30px, 8.2vw, 34px); margin-bottom: 18px; }
+  .hero-portrait { height: clamp(300px, 82vw, 340px); }
+  .hero .hero-role { font-size: clamp(28px, 7.2vw, 30px); margin-bottom: 16px; }
+  .hero .hero-actions { margin-top: 20px; }
 }
 
 @media (max-width: 390px) {
-  .hero-portrait { height: 280px; }
+  .hero-portrait { height: clamp(280px, 82vw, 320px); }
 }

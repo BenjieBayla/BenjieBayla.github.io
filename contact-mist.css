@@ -1,0 +1,63 @@
+/* Contact actions and a single ambient hero layer. */
+.contact-section { padding-block: 62px; }
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr);
+  gap: clamp(36px, 7vw, 100px);
+  align-items: center;
+}
+.contact-main { display: block; padding: 0; }
+.contact-main .eyebrow { margin-bottom: 22px; }
+.contact-main h2 { font-size: clamp(64px, 6.2vw, 88px); }
+.contact-main p {
+  max-width: 390px;
+  margin: 24px 0 0;
+  color: #d0c1b7;
+  font-size: 16px;
+  line-height: 1.65;
+}
+.contact-bottom {
+  display: grid;
+  justify-content: stretch;
+  align-items: start;
+  gap: 28px;
+}
+.contact-email { display: grid; justify-items: start; gap: 9px; }
+.contact-label {
+  color: #b79785;
+  font-size: 11px;
+  font-weight: 550;
+  letter-spacing: .14em;
+}
+.contact-bottom .email-link { margin: 0; font-size: 20px; }
+.contact-socials { width: auto; }
+
+@keyframes hero-haze-drift {
+  from { transform: translate3d(-9px, 0, 0); }
+  to { transform: translate3d(9px, 0, 0); }
+}
+.hero-haze {
+  position: absolute;
+  top: -70px;
+  right: 5%;
+  width: min(85%, 980px);
+  height: 560px;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgb(241 238 235 / 4%) 0%, rgb(241 238 235 / 2%) 38%, transparent 72%);
+  animation: hero-haze-drift 52s ease-in-out infinite alternate;
+}
+
+@media (max-width: 760px) {
+  .contact-section { padding-block: 48px; }
+  .contact-layout { grid-template-columns: 1fr; gap: 32px; }
+  .contact-main .eyebrow { margin-bottom: 18px; }
+  .contact-main h2 { font-size: clamp(51px, 10vw, 76px); }
+  .contact-main p { margin-top: 20px; font-size: 15px; }
+  .contact-bottom { gap: 22px; }
+  .contact-bottom .email-link { font-size: 18px; }
+  .hero-haze { top: 0; right: -35%; width: 120%; height: 420px; animation: none; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-haze { animation: none; transform: none; }
+}

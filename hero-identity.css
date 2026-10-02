@@ -1,0 +1,33 @@
+/* Full-name hierarchy within the existing hero identity panel. */
+.identity-card > div { min-width: 0; }
+.identity-card .identity-label { margin-bottom: 8px; }
+.identity-card .identity-name {
+  color: #F1EEEB;
+  font-size: clamp(30px, 2.65vw, 40px);
+  font-weight: 550;
+  line-height: 1.07;
+  letter-spacing: -.04em;
+  white-space: nowrap;
+}
+.identity-name-line { white-space: nowrap; }
+.identity-name-middle { margin-left: .09em; }
+.identity-card .identity-bracket { font-size: clamp(24px, 2.5vw, 34px); color: #fac4b466; }
+.identity-card .identity-bracket:first-child { margin-right: 10px; }
+.identity-card .identity-bracket:last-child { margin-left: 10px; }
+
+@media (max-width: 1180px) {
+  .identity-card .identity-name { font-size: clamp(28px, 3vw, 33px); white-space: normal; }
+  .identity-name-surname { display: block; }
+}
+
+@media (max-width: 760px) {
+  .identity-card .identity-name { font-size: clamp(24px, 5.6vw, 28px); }
+  .identity-card .identity-bracket { font-size: 24px; }
+  .identity-card .identity-bracket:first-child { margin-right: 8px; }
+  .identity-card .identity-bracket:last-child { margin-left: 8px; }
+}
+
+@media (max-width: 390px) {
+  .identity-card .identity-name { font-size: clamp(24px, 6.5vw, 26px); }
+  .identity-card .identity-bracket { display: none; }
+}

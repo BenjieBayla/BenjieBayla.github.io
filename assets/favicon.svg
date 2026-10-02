@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#171414"/><text x="9" y="43" fill="#f2ede8" font-family="Arial,sans-serif" font-size="35" font-weight="700" letter-spacing="-3">jb</text><circle cx="49" cy="42" r="4" fill="#fa654f"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <g transform="translate(2 5) scale(.088 .113)">
+    <path fill="#FC7059" d="M205 115 111 164 110 331 8 388 9 465C75 455 175 404 193 385 204 372 206 356 206 338Z M206 8 110 60 111 134 206 84Z"/>
+    <path fill="#111111" fill-rule="evenodd" stroke="#111111" stroke-width="24" stroke-linejoin="round" d="M230 38V455H282Q302 455 313 436Q350 470 401 467C483 467 544 406 544 319 544 235 489 176 404 176 370 176 340 187 315 208L314 89Z M394 249C433 249 461 280 461 320S433 392 392 392 315 359 315 321 350 249 394 249Z"/>
+    <path fill="#F1EEEB" fill-rule="evenodd" d="M230 38V455H282Q302 455 313 436Q350 470 401 467C483 467 544 406 544 319 544 235 489 176 404 176 370 176 340 187 315 208L314 89Z M394 249C433 249 461 280 461 320S433 392 392 392 315 359 315 321 350 249 394 249Z"/>
+    <circle cx="610" cy="408" r="58" fill="#FC7059"/>
+  </g>
+</svg>

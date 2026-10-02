@@ -1,0 +1,28 @@
+/* Web logo sizing only; the source artwork and page visual system remain intact. */
+.brand { gap: 12px; }
+.brand img.brand-mark { display: block; width: auto; height: 32px; flex: none; }
+
+.hero-visual img.identity-monogram {
+  display: block;
+  width: auto;
+  height: 120px;
+  max-width: calc(100% - 72px);
+  top: 86px;
+  opacity: .5;
+  object-fit: contain;
+  text-shadow: none;
+}
+
+@media (max-width: 1000px) {
+  .hero-visual img.identity-monogram { height: 108px; top: 76px; }
+}
+
+@media (max-width: 760px) {
+  .brand { gap: 10px; }
+  .brand img.brand-mark { height: 29px; }
+  .hero-visual img.identity-monogram { height: 92px; top: 36px; }
+}
+
+@media (max-width: 390px) {
+  .hero-visual img.identity-monogram { height: 90px; top: 30px; }
+}

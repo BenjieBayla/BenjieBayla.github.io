@@ -18,13 +18,18 @@
 .motion-enabled .hero-visual { animation: hero-enter 300ms ease-out 60ms both; }
 
 .motion-reveal {
-  transition: opacity 270ms ease-out, transform 270ms ease-out;
+  transition: opacity 320ms ease-out, transform 320ms ease-out;
 }
 .motion-reveal.motion-pending {
   opacity: .65;
-  transform: translateY(10px);
+  transform: translateY(11px);
 }
 .motion-reveal.motion-instant { transition: none; }
+
+@media (max-width: 760px) {
+  .motion-reveal { transition-duration: 280ms; }
+  .motion-reveal.motion-pending { transform: translateY(8px); }
+}
 
 .mobile-nav.is-opening { animation: mobile-nav-enter 180ms ease-out both; }
 .mobile-nav.is-closing { animation: mobile-nav-exit 140ms ease-in both; }

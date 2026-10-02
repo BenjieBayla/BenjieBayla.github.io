@@ -76,14 +76,14 @@ if ('IntersectionObserver' in window) {
 if (!reducedMotion.matches) document.documentElement.classList.add('motion-enabled');
 
 const revealTargets = document.querySelectorAll(
-  '#work > .container, #skills > .container, #experience > .container, #about > .container, #contact > .container'
+  '#experience > .container, #skills > .container, #about > .container'
 );
 if (!reducedMotion.matches && 'IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) reveal(entry.target);
     });
-  }, { rootMargin: '0px 0px 40px 0px', threshold: 0 });
+  }, { rootMargin: '0px 0px -15% 0px', threshold: 0 });
 
   function reveal(target, immediate = false) {
     if (!target.classList.contains('motion-pending')) return;
@@ -95,7 +95,7 @@ if (!reducedMotion.matches && 'IntersectionObserver' in window) {
 
   revealTargets.forEach(target => {
     const rect = target.getBoundingClientRect();
-    if (rect.top <= innerHeight + 40 && rect.bottom >= -40) return;
+    if (rect.top <= innerHeight * .85 && rect.bottom >= 0) return;
     target.classList.add('motion-reveal', 'motion-pending');
     revealObserver.observe(target);
     target.addEventListener('focusin', () => reveal(target, true), { once: true });

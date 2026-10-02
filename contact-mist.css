@@ -57,7 +57,7 @@
   height: 90%;
   background:
     radial-gradient(ellipse 32% 42% at 24% 45%, rgb(241 238 235 / 11%) 0%, rgb(241 238 235 / 6%) 45%, transparent 86%),
-    linear-gradient(112deg, transparent 25%, rgb(241 238 235 / 7%) 34%, rgb(241 238 235 / 10%) 43%, rgb(241 238 235 / 3%) 55%, transparent 64%);
+    linear-gradient(112deg, transparent 25%, rgb(241 238 235 / 8.5%) 34%, rgb(241 238 235 / 10%) 43%, rgb(241 238 235 / 4.5%) 55%, transparent 64%);
   animation: hero-haze-primary-drift 25s linear infinite alternate;
 }
 .hero-haze-secondary {
@@ -67,7 +67,7 @@
   height: 94%;
   background:
     radial-gradient(ellipse 34% 42% at 68% 46%, rgb(210 214 216 / 6%) 0%, rgb(210 214 216 / 3%) 45%, transparent 86%),
-    linear-gradient(70deg, transparent 38%, rgb(210 214 216 / 4%) 46%, rgb(210 214 216 / 6%) 53%, transparent 62%);
+    linear-gradient(70deg, transparent 38%, rgb(210 214 216 / 5.5%) 46%, rgb(210 214 216 / 6%) 53%, transparent 62%);
   animation: hero-haze-secondary-drift 32s linear infinite alternate;
 }
 

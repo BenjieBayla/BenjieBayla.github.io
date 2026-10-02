@@ -14,8 +14,9 @@
   to { opacity: 0; transform: translateY(-8px); }
 }
 
-.motion-enabled .hero-copy { animation: hero-enter 300ms ease-out both; }
-.motion-enabled .hero-portrait { animation: hero-enter 300ms ease-out 60ms both; }
+.motion-enabled .hero-name,
+.motion-enabled .hero-copy,
+.motion-enabled .hero-portrait { animation: hero-enter 300ms ease-out both; }
 
 .motion-reveal {
   transition: opacity 320ms ease-out, transform 320ms ease-out;
@@ -35,6 +36,7 @@
 .mobile-nav.is-closing { animation: mobile-nav-exit 140ms ease-in both; }
 
 @media (prefers-reduced-motion: reduce) {
+  .motion-enabled .hero-name,
   .motion-enabled .hero-copy,
   .motion-enabled .hero-portrait,
   .mobile-nav.is-opening,

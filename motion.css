@@ -15,7 +15,7 @@
 }
 
 .motion-enabled .hero-copy { animation: hero-enter 300ms ease-out both; }
-.motion-enabled .hero-visual { animation: hero-enter 300ms ease-out 60ms both; }
+.motion-enabled .hero-portrait { animation: hero-enter 300ms ease-out 60ms both; }
 
 .motion-reveal {
   transition: opacity 320ms ease-out, transform 320ms ease-out;
@@ -36,7 +36,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .motion-enabled .hero-copy,
-  .motion-enabled .hero-visual,
+  .motion-enabled .hero-portrait,
   .mobile-nav.is-opening,
   .mobile-nav.is-closing { animation: none !important; }
   .motion-reveal { transition: none !important; }

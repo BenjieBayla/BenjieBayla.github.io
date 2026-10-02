@@ -1,0 +1,49 @@
+/* Keep the portrait within the existing hero grid and atmosphere. */
+.hero-name {
+  margin-top: clamp(34px, 4vw, 48px);
+  color: var(--text);
+  font-family: var(--display);
+  font-size: clamp(23px, 2.35vw, 30px);
+  font-weight: 550;
+  letter-spacing: -.035em;
+  line-height: 1.2;
+}
+.hero-name > span { white-space: nowrap; }
+
+.hero-portrait {
+  position: relative;
+  align-self: end;
+  display: flex;
+  justify-content: flex-end;
+  height: 500px;
+  min-width: 0;
+}
+.hero-portrait img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: right bottom;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 78%, transparent 100%);
+}
+
+@media (min-width: 1600px) {
+  .hero-portrait { height: 550px; }
+}
+
+@media (max-width: 1000px) {
+  .hero-portrait { height: 420px; }
+}
+
+@media (max-width: 760px) {
+  .hero-name { margin-top: 30px; font-size: clamp(23px, 5vw, 27px); }
+  .hero-name-surname { display: block; }
+  .hero-portrait { height: 320px; justify-content: center; }
+  .hero-portrait img { object-position: center bottom; }
+}
+
+@media (max-width: 390px) {
+  .hero-portrait { height: 280px; }
+}

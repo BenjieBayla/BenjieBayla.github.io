@@ -1,4 +1,4 @@
-/* Contact actions and a single ambient hero layer. */
+/* Contact actions and quiet atmospheric motion. */
 .contact-section { padding-block: 62px; }
 .contact-layout {
   display: grid;
@@ -32,20 +32,63 @@
 .contact-bottom .email-link { margin: 0; font-size: 20px; }
 .contact-socials { width: auto; }
 
-@keyframes hero-haze-drift {
-  from { transform: translate3d(-9px, 0, 0); }
-  to { transform: translate3d(9px, 0, 0); }
+@keyframes hero-haze-primary-drift {
+  from { transform: translate3d(-50px, -8px, 0); }
+  to { transform: translate3d(50px, 8px, 0); }
+}
+@keyframes hero-haze-secondary-drift {
+  from { transform: translate3d(45px, -15px, 0); }
+  to { transform: translate3d(-45px, 15px, 0); }
+}
+@keyframes section-haze-drift {
+  from { transform: translate3d(-26px, 0, 0); }
+  to { transform: translate3d(26px, 0, 0); }
 }
 .hero-haze {
   position: absolute;
-  top: -70px;
-  right: 5%;
-  width: min(85%, 980px);
-  height: 560px;
   pointer-events: none;
-  background: radial-gradient(ellipse at center, rgb(241 238 235 / 4%) 0%, rgb(241 238 235 / 2%) 38%, transparent 72%);
-  animation: hero-haze-drift 52s ease-in-out infinite alternate;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 72%, transparent);
+  mask-image: linear-gradient(to bottom, transparent, #000 16%, #000 72%, transparent);
 }
+.hero-haze-primary {
+  top: -4%;
+  left: -12%;
+  width: 100%;
+  height: 90%;
+  background:
+    radial-gradient(ellipse 32% 42% at 24% 45%, rgb(241 238 235 / 11%) 0%, rgb(241 238 235 / 6%) 45%, transparent 86%),
+    linear-gradient(112deg, transparent 25%, rgb(241 238 235 / 7%) 34%, rgb(241 238 235 / 10%) 43%, rgb(241 238 235 / 3%) 55%, transparent 64%);
+  animation: hero-haze-primary-drift 25s linear infinite alternate;
+}
+.hero-haze-secondary {
+  top: 2%;
+  right: -15%;
+  width: 90%;
+  height: 94%;
+  background:
+    radial-gradient(ellipse 34% 42% at 68% 46%, rgb(210 214 216 / 6%) 0%, rgb(210 214 216 / 3%) 45%, transparent 86%),
+    linear-gradient(70deg, transparent 38%, rgb(210 214 216 / 4%) 46%, rgb(210 214 216 / 6%) 53%, transparent 62%);
+  animation: hero-haze-secondary-drift 32s linear infinite alternate;
+}
+
+.experience-section,
+.expertise-section,
+.about-section { position: relative; overflow: hidden; }
+.experience-section > .container,
+.expertise-section > .container,
+.about-section > .container { position: relative; z-index: 1; }
+.experience-section::before,
+.expertise-section::before,
+.about-section::before {
+  content: '';
+  position: absolute;
+  inset: -12% -8%;
+  pointer-events: none;
+  background: radial-gradient(ellipse 58% 65% at 48% 48%, rgb(235 232 229 / 3.5%) 0%, rgb(235 232 229 / 1.5%) 40%, transparent 76%);
+  animation: section-haze-drift 44s linear infinite alternate;
+}
+.expertise-section::before { animation-direction: alternate-reverse; animation-duration: 51s; }
+.about-section::before { animation-duration: 39s; }
 
 @media (max-width: 760px) {
   .contact-section { padding-block: 48px; }
@@ -55,9 +98,16 @@
   .contact-main p { margin-top: 20px; font-size: 15px; }
   .contact-bottom { gap: 22px; }
   .contact-bottom .email-link { font-size: 18px; }
-  .hero-haze { top: 0; right: -35%; width: 120%; height: 420px; animation: none; transform: none; }
+  .hero-haze-primary { top: 0; left: -30%; width: 145%; height: 580px; opacity: .7; animation-duration: 34s; }
+  .hero-haze-secondary { display: none; }
+  .experience-section::before,
+  .expertise-section::before,
+  .about-section::before { opacity: .8; animation-duration: 50s; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-haze { animation: none; transform: none; }
+  .hero-haze,
+  .experience-section::before,
+  .expertise-section::before,
+  .about-section::before { animation: none; transform: none; }
 }

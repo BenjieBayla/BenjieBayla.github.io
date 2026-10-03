@@ -20,7 +20,7 @@
   text-align: left;
 }
 .hero-name > span { display: block; white-space: nowrap; }
-.hero-copy { grid-column: 1; grid-row: 2; min-width: 0; }
+.hero-copy { grid-column: 1; grid-row: 2; min-width: 0; align-self: end; }
 .hero .hero-role {
   margin: 0 0 16px;
   font-size: clamp(28px, 2.3vw, 32px);
@@ -62,7 +62,7 @@
   .hero-layout { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto; gap: 16px; }
   .hero .hero-name { grid-column: 1; font-size: clamp(42px, 6vw, 60px); text-align: center; }
   .hero-portrait { grid-column: 1; grid-row: 2; height: 340px; justify-content: center; }
-  .hero-copy { grid-row: 3; width: 100%; max-width: 620px; justify-self: center; }
+  .hero-copy { grid-row: 3; width: 100%; max-width: 620px; justify-self: center; align-self: start; }
   .hero .hero-role { font-size: 30px; }
 }
 
